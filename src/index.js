@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import CounterContainer from './CounterContainer';
+import Application from './Application';
 
-render(<CounterContainer />, document.getElementById('root'));
+render(<Application />, document.getElementById('root'));
