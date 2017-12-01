@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Counter from './Counter';
-
 const withCount = WrappedComponent => {
   return class extends Component {
     static displayName = `withCount${WrappedComponent.displayName || WrappedComponent.name}`;
