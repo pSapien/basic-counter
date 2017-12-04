@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 
-import withCount from './withCount';
+import WithCount from './WithCount';
 import Counter from './Counter';
 import './style.css';
 
-const CounterContainer = withCount(Counter);
-
 class Application extends Component {
   render() {
-    return <CounterContainer />;
+    return (
+      <WithCount
+        render={(count, incrementCount, decrementCount, resetCount) => (
+          <Counter
+            count={count}
+            incrementCount={incrementCount}
+            decrementCount={decrementCount}
+            resetCount={resetCount}
+          />
+        )}
+      />
+    );
   }
 }
 
